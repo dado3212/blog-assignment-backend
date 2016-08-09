@@ -3,7 +3,7 @@ import Post from '../models/post_model';
 export const createPost = (req, res) => {
   const post = new Post();
   post.title = req.body.title;
-  post.tags = req.body.tags;
+  post.tags = req.body.tags.split(' ');
   post.content = req.body.content;
 
   post.save()
