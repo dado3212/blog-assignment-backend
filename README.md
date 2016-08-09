@@ -1,9 +1,5 @@
-# starter express app template
+# HW5 Part 1 - API Server for Blog Backend
 
-* node with babel
-* expressjs
-* airbnb eslint rules
+EC: Tag splitting on whitespace.
 
-Procfile set up to run on [heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app)
-
-
+Check it out live at http://dado3212blog-hw5.surge.sh, and the API server at http://dado3212blog-api.herokuapp.com/api.
