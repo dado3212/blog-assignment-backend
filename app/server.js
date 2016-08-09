@@ -20,15 +20,12 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
 // default index route
 app.get('/', (req, res) => {
   res.send('hi');
 });
 
-app.get('/api', (req, res) => {
-
-});
+app.use('/api', apiRouter);
 
 // START THE SERVER
 // =============================================================================
