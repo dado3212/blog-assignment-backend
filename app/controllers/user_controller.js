@@ -15,11 +15,11 @@ export const signin = (req, res, next) => {
 export const signup = (req, res, next) => {
   const email = req.body.email;
   const password = req.body.password;
-  const name = req.body.name;
+  const username = req.body.username;
 
   // Check that there is an email and a password
-  if (!email || !password || !name) {
-    return res.status(422).send('You must provide email, password, and name.');
+  if (!email || !password || !username) {
+    return res.status(422).send('You must provide email, password, and username.');
   }
 
   // Check if there exists a user with that email
@@ -29,7 +29,7 @@ export const signup = (req, res, next) => {
       const user = new User();
       user.email = email;
       user.password = password;
-      user.name = name;
+      user.username = username;
 
       // Attempt to save the new user
       user.save()
