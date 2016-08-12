@@ -6,6 +6,7 @@ const UserSchema = new Schema(
   {
     email: { type: String, unique: true, lowercase: true },
     password: String,
+    name: String,
   },
   {
     timestamps: { createdAt: 'created_at' },
@@ -18,7 +19,7 @@ UserSchema.set('toJSON', {
 });
 
 // Handle password hashing
-UserSchema.pre('save', (next) => {
+UserSchema.pre('save', function beforeUserSave(next) {
   const user = this;
 
   // Ignore hashing if password not being modified
