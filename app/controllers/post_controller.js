@@ -5,6 +5,7 @@ export const createPost = (req, res) => {
   post.title = req.body.title;
   post.tags = req.body.tags.split(' ');
   post.content = req.body.content;
+  post.author = req.user._id;
 
   post.save()
   .then(result => {
@@ -32,17 +33,19 @@ export const getPosts = (req, res) => {
 };
 
 export const getPost = (req, res) => {
-  Post.findById(req.params.id, (err, post) => {
-    if (err) {
-      res.json({ message: `Error: ${err}` });
-    } else {
-      res.json({
-        id: post._id,
-        tags: post.tags,
-        title: post.title,
-        content: post.content,
-      });
-    }
+  Post.findById(req.params.id)
+  .populate('author')
+  .then(post => {
+    res.json({
+      id: post._id,
+      tags: post.tags,
+      title: post.title,
+      content: post.content,
+      author: post.author,
+    });
+  })
+  .catch(err => {
+    res.json({ message: `Error: ${err}` });
   });
 };
 
