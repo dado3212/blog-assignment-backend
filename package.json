@@ -1,8 +1,8 @@
 {
-  "name": "example_express_with_es6",
+  "name": "hw5-mongo",
   "version": "1.0.0",
   "description": "",
-  "author": "",
+  "author": "Alex Beals",
   "main": "app/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,6 +16,7 @@
     "babel-cli": "^6.11.4",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-2": "^6.11.0",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
     "cors": "^2.7.1",
     "express": "^4.14.0",
