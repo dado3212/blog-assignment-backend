@@ -1,7 +1,9 @@
-# HW5 Part 1 - API Server for Blog Backend (and part 2!)
+# Blog Assignment (Backend) - CS52
 
-Used Express and Passport to create a backend for blog and authentication.
+### What it is
 
-EC: Tag splitting on whitespace.
+This was a project to create a fully working blog with frontend and backend.  The frontend used a React/Redux stack to handle all of the user interactions in creating users, logins, and creating/modifying/deleting posts.  The backend used Express and Mongo to create a RESTful API to interact with the frontend.  The entire project used Passport.js for authentication, in order to keep the backend and frontend user-protected.
 
-Check it out live at http://dado3212blog-hw5.surge.sh, and the API server at http://dado3212blog-api.herokuapp.com/api.
+### Links
+
+Checkout the frontend live at http://dado3212blog-hw5.surge.sh, and the backend live at http://dado3212blog-api.herokuapp.com/api.
