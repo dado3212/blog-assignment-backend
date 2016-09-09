@@ -6,4 +6,4 @@ This was a project to create a fully working blog with frontend and backend.  Th
 
 ### Links
 
-Checkout the frontend live at http://dado3212blog-hw5.surge.sh, and the backend live at http://dado3212blog-api.herokuapp.com/api.
+Checkout the frontend live at http://dado3212blog-hw5-p2.surge.sh, and the backend live at http://cs52-hw5-p2.herokuapp.com/api.
